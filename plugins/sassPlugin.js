@@ -6,14 +6,14 @@ export const sassPlugin = {
       as: 'css',
       test(id) {
         // console.log(id)
-        return id.endsWith('.sass')
+        return id.endsWith('.scss')
       },
       transform(code) {
         // console.log(code)
         return sass
           .renderSync({
             data: code,
-            indentedSyntax: true // only for .sass more see: https://sass-lang.com/documentation/js-api#file
+            // indentedSyntax: true // only for .sass more see: https://sass-lang.com/documentation/js-api#file
           })
           .css.toString()
       }
