@@ -1,38 +1,16 @@
 const state = {
-  count: 0,
-}
-
-const mutations = {
-  increment(state) {
-    state.count++
-  },
-  decrement(state) {
-    state.count--
+  authed: localStorage.getItem('token') !== null,
+  user: JSON.parse(localStorage.getItem('user')) || {
+    username: '',
+    role: 'admin',
   },
 }
 
-const actions = {
-  increment: ({ commit }) => commit('increment'),
-  decrement: ({ commit }) => commit('decrement'),
-  incrementIfOdd({ commit, state }) {
-    if ((state.count + 1) % 2 === 0) {
-      commit('increment')
-    }
-  },
-  incrementAsync({ commit }) {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        commit('increment')
-        resolve()
-      }, 1000)
-    })
-  },
-}
+const mutations = {}
 
-const getters = {
-  count: state => (state.count),
-  evenOrOdd: (state) => (state.count % 2 === 0 ? 'even' : 'odd'),
-}
+const actions = {}
+
+const getters = {}
 
 export default {
   state,
