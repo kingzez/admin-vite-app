@@ -4,12 +4,15 @@
     <p>My Data is: {{ someData }}</p>
     <p v-if="waited != null">I waited for {{ waited }}</p>
     toggle: {{ log(toggle) }}
-    <button @click="counter++">{{ counter }}</button>
+    <p> counter: {{ count }}</p>
+    <button @click="increment">+</button>
+    <button @click="decrement">-</button>
   </div>
 </template>
 
 <script>
-import { defineComponent, getCurrentInstance, inject, ref } from 'vue'
+import { defineComponent, getCurrentInstance, inject, ref, computed } from 'vue'
+import { useStore } from 'vuex';
 // import { guardSymbol } from '../../src/components/View'
 
 export default defineComponent({
@@ -17,7 +20,6 @@ export default defineComponent({
   props: ['waited'],
   data: () => ({
     toggle: false,
-    counter: 0,
   }),
 
   setup() {
@@ -26,6 +28,15 @@ export default defineComponent({
     // console.log('calling setup in Home')
     // await registerGuard(me)
     // emit('registerGuard', getCurrentInstance())
+    const store = useStore()
+    const count = computed(() => store.getters.count)
+
+    function increment() {
+      store.dispatch('increment')
+    }
+    function decrement() {
+      store.dispatch('decrement')
+    }
 
     function log(value) {
       console.log(value)
@@ -35,6 +46,9 @@ export default defineComponent({
     return {
       log,
       someData: ref(0),
+      count,
+      increment,
+      decrement
     }
   },
 

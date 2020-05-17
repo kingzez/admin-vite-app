@@ -1,6 +1,6 @@
 <template>
   <div class="dashboard-container">
-    <div class="welcome">Welcome</div>
+    <div class="welcome">Welcome To Admin Vite App</div>
     <div class="illustrations">
       <img class="one" src="../../assets/img/cloud_sync_2aph.svg" alt />
       <img class="two" src="../../assets/img/swipe_profiles1_i6mr.svg" alt />
@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'dashboard'
+  name: 'Dashboard'
 }
 </script>
 <style lang="scss" scoped>

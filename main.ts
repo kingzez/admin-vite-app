@@ -1,8 +1,9 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import { router } from './router'
+import router from './router'
+import vuex from './store'
 import 'bulma/css/bulma.css'
-import './assets/style/index.css'
-import './assets/style/bulma.scss'
+import './assets/style/index.scss'
+import './assets/style/bulma-variables.scss'
 
-createApp(App).use(router).mount('#app')
+createApp(App).use(router).use(vuex).mount('#app')

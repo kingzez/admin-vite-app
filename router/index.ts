@@ -22,7 +22,7 @@ export const constantRoutes: RouteRecordRaw[] = [
 
 
 export const routerHistory = createWebHistory()
-export const router = createRouter({
+const router = createRouter({
   history: routerHistory,
   strict: true,
   routes: constantRoutes,
@@ -40,3 +40,5 @@ export const router = createRouter({
     return false
   },
 })
+
+export default router
