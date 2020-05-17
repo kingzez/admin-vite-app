@@ -4,10 +4,10 @@
       <p class="menu-label">General</p>
       <ul class="menu-list">
         <li>
-          <a>Dashboard</a>
+           <router-link to="/dashboard">Dashboard</router-link>
         </li>
         <li>
-          <a>Customers</a>
+          <router-link to="/home">home</router-link>
         </li>
       </ul>
       <p class="menu-label">Administration</p>

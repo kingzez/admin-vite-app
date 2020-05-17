@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar">
+  <nav class="navbar has-shadow">
     <div class="navbar-brand">
       <a class="navbar-item" href="http://bulma.io">
         <img
