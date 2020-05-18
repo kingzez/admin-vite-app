@@ -7,7 +7,7 @@
           <router-link to="/dashboard">Dashboard</router-link>
         </li>
         <li>
-          <router-link to="/home">home</router-link>
+          <router-link to="/">home</router-link>
         </li>
       </ul>
       <p class="menu-label">Administration</p>
@@ -16,7 +16,7 @@
           <a>Team Settings</a>
         </li>
         <li>
-          <a class="is-active">Manage Your Team</a>
+          <a>Manage Your Team</a>
           <ul>
             <li>
               <a>Members</a>
@@ -28,15 +28,6 @@
               <a>Add a member</a>
             </li>
           </ul>
-        </li>
-        <li>
-          <a>Invitations</a>
-        </li>
-        <li>
-          <a>Cloud Storage Environment Settings</a>
-        </li>
-        <li>
-          <a>Authentication</a>
         </li>
       </ul>
       <p class="menu-label">Transactions</p>
@@ -59,3 +50,13 @@ export default {
   name: 'Sidebar'
 }
 </script>
+<style lang="scss" scoped>
+.menu {
+  a {
+
+    &.router-link-exact-active {
+      // color: #;
+    }
+  }
+}
+</style>

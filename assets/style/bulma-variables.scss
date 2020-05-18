@@ -189,7 +189,9 @@ $colors: (
 $sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 $size-7 !default;
 
 $navbar-height: 3.25rem;
+$navbar-item-img-max-height: 2rem !default;
 
+// sidebar menu
 .is-sidebar-menu {
   padding: 25px;
   background: $grey-dark;
@@ -214,6 +216,7 @@ $navbar-height: 3.25rem;
   }
 }
 
+// main content
 .is-main-content {
   background: $white;
 }

@@ -26,6 +26,7 @@ const router = createRouter({
   history: routerHistory,
   strict: true,
   routes: constantRoutes,
+  linkActiveClass: 'is-active',
   async scrollBehavior(to, from, savedPosition) {
     await scrollWaiter.wait()
     if (savedPosition) {
